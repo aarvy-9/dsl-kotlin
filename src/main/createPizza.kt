@@ -1,8 +1,5 @@
-
-fun processDsl(x: String): String {
-    return x
+infix fun process(block: () -> Unit) {
+    println(block)
 }
 
-fun main(args: Array<String>) {
-    println(processDsl("create Pizza"))
-}
+
