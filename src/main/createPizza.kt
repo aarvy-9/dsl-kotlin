@@ -1,14 +1,13 @@
-class Pizza {       
-	val Pizza = this	
-	infix fun create(item: String){
-		Pizza = item
-	}
+class Pizza {
+  override fun toString() = "Pizza:"
 }
 
-
-object process{
-	infix fun dsl(block: Pizza.() -> Unit) : Pizza{
-		return Pizza().apply(block)
-	}
+object create {
+  infix fun Pizza(block: () -> Unit): String {
+    val toBuild = Pizza()
+    
+    block()
+    
+    return toBuild.toString()
+  }
 }
-
