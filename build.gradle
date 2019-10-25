@@ -40,3 +40,7 @@ wrapper{
     distributionType = Wrapper.DistributionType.BIN
 }
 
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions.suppressWarnings = true
+}
