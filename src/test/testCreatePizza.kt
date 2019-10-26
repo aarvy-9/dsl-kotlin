@@ -2,17 +2,20 @@ import kotlin.test.assertEquals
 import org.junit.Test
 
 class TestSource {
+
 	@Test fun testCanary() {
 		assertEquals(true, true)
 	}
 	
 	@Test fun testCreatePizza() {
-		val result = create Pizza {}
- 
+	
+		val result = create Pizza {} 
 		assertEquals("Pizza:", result)
+	
 	}
 	
 	@Test fun testSpreadCheese() {
+	
 		val result = create Pizza {
 			add spread "cheese"
 		}
@@ -21,6 +24,7 @@ class TestSource {
 	}
 	
 	@Test fun testSpreadToppings() {
+
 		val result = create Pizza{
 			add spread "cheese"
 			toppings {
@@ -34,6 +38,7 @@ class TestSource {
 	}
 	
 	@Test fun testSpreadSauce() {
+	
 		val result = create Pizza{
 			add spread "cheese"
 			toppings {
@@ -48,6 +53,7 @@ class TestSource {
 	}
 	
 	@Test fun testBaked() {
+	
 		val result = create Pizza{
 			add spread "cheese"
 			toppings {
